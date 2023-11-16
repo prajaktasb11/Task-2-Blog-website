@@ -1,0 +1,25 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Blog</h1>
+    <ul class="list-group">
+      <% for (let post of posts) { %>
+        <li class="list-group-item">
+          <h2><%= post.title %></h2>
+          <p><%= post.content %></p>
+        </li>
+      <% } %>
+    </ul>
+    <a href="/new" class="btn btn-primary mt-3">Create New Post</a>
+  </div>
+</body>
+</html>
